@@ -240,6 +240,7 @@ class RateMyAppStarDialogState extends State<RateMyAppStarDialog> {
               enabledBorder: const OutlineInputBorder(
                   borderSide: const BorderSide(color: Colors.grey, width: 1.0)),
               hintText: 'Enter your feedback',
+              hintStyle: widget.dialogStyle.messageStyle,
               labelStyle: TextStyle(color: Colors.white.withOpacity(0.3)),
               border: OutlineInputBorder(
                 borderSide: const BorderSide(color: Colors.grey, width: 1.0),
