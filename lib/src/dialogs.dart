@@ -20,7 +20,7 @@ typedef DialogActionsBuilder = List<Widget> Function(BuildContext context);
 
 /// Allows to dynamically build actions according to the specified rating.
 typedef StarDialogActionsBuilder = List<Widget> Function(
-    BuildContext context, double stars);
+    BuildContext context, double stars, String message);
 
 /// The Android Rate my app dialog.
 class RateMyAppDialog extends StatelessWidget {
