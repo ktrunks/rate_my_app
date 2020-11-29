@@ -225,6 +225,9 @@ class RateMyAppStarDialogState extends State<RateMyAppStarDialog> {
             filledIconData: widget.starRatingOptions.filledIconData,
             rating: _currentRating == null ? 0.0 : _currentRating.toDouble(),
           ),
+          const SizedBox(
+            height: 5,
+          ),
           TextField(
             controller: widget.textEditingController,
             maxLines: 4,
