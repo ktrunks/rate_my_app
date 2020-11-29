@@ -150,6 +150,8 @@ class RateMyAppStarDialog extends StatefulWidget {
   /// The smooth star rating style.
   final StarRatingOptions starRatingOptions;
 
+  final TextEditingController textEditingController;
+
   /// Creates a new Rate my app star dialog.
   const RateMyAppStarDialog(
     this.rateMyApp, {
@@ -158,6 +160,7 @@ class RateMyAppStarDialog extends StatefulWidget {
     @required this.contentBuilder,
     this.actionsBuilder,
     @required this.dialogStyle,
+    @required this.textEditingController,
     @required this.starRatingOptions,
   })  : assert(title != null),
         assert(message != null),
@@ -223,6 +226,7 @@ class RateMyAppStarDialogState extends State<RateMyAppStarDialog> {
             rating: _currentRating == null ? 0.0 : _currentRating.toDouble(),
           ),
           TextField(
+            controller: widget.textEditingController,
             maxLines: 4,
             decoration:
                 InputDecoration.collapsed(hintText: "Enter your feedback "),
