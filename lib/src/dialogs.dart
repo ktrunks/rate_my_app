@@ -229,16 +229,35 @@ class RateMyAppStarDialogState extends State<RateMyAppStarDialog> {
             height: 5,
           ),
           TextField(
+            style: widget.dialogStyle.messageStyle,
+            obscureText: true,
             controller: widget.textEditingController,
             maxLines: 4,
-            decoration:
-                InputDecoration.collapsed(hintText: "Enter your feedback "),
-          )
+            decoration: InputDecoration(
+              filled: true,
+              fillColor: Colors.white.withOpacity(0.1),
+              floatingLabelBehavior: FloatingLabelBehavior.never,
+              enabledBorder: const OutlineInputBorder(
+                  borderSide: const BorderSide(color: Colors.grey, width: 1.0)),
+              hintText: 'Enter your feedback',
+              labelStyle: TextStyle(color: Colors.white.withOpacity(0.3)),
+              border: OutlineInputBorder(
+                borderSide: const BorderSide(color: Colors.grey, width: 1.0),
+              ),
+              disabledBorder: OutlineInputBorder(
+                borderSide: const BorderSide(color: Colors.grey, width: 1.0),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderSide: const BorderSide(color: Colors.grey, width: 1.0),
+              ),
+            ),
+          ),
         ],
       ),
     );
 
     return AlertDialog(
+      backgroundColor: Color(0xff182131),
       title: Padding(
         padding: widget.dialogStyle.titlePadding,
         child: Text(
