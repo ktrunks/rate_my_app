@@ -230,7 +230,7 @@ class RateMyAppStarDialogState extends State<RateMyAppStarDialog> {
           ),
           TextField(
             style: widget.dialogStyle.messageStyle,
-            obscureText: true,
+            obscureText: false,
             controller: widget.textEditingController,
             maxLines: 4,
             decoration: InputDecoration(
