@@ -193,6 +193,7 @@ class RateMyApp {
               messagePadding: EdgeInsets.only(bottom: 20),
             ),
         starRatingOptions: starRatingOptions ?? const StarRatingOptions(),
+        textEditingController: textEditingController,
       ),
     );
 
