@@ -54,7 +54,7 @@ class _ContentWidgetState extends State<ContentWidget> {
             RaisedButton(
               child: const Text('Launch "Rate my app" star dialog'),
               onPressed: () async {
-                await widget.rateMyApp.showStarRateDialog(context, actionsBuilder: (_, stars,feedback) => starRateDialogActionsBuilder(context, stars,feedback)); // We launch the Rate my app dialog with stars.
+                await widget.rateMyApp.showStarRateDialog(context, actionsBuilder: (_, stars) => starRateDialogActionsBuilder(context, stars)); // We launch the Rate my app dialog with stars.
                 refresh();
               },
             ),
@@ -83,7 +83,7 @@ class _ContentWidgetState extends State<ContentWidget> {
     });
   }
 
-  List<Widget> starRateDialogActionsBuilder(BuildContext context, double stars, String feedback) {
+  List<Widget> starRateDialogActionsBuilder(BuildContext context, double stars) {
     final Widget cancelButton = RateMyAppNoButton(
       // We create a custom "Cancel" button using the RateMyAppNoButton class.
       widget.rateMyApp,
